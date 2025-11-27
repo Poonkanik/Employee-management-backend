@@ -13,19 +13,25 @@ public class Employee {
     private String name;
     private String email;
     private String role;
-
     private Integer experience;
     private Double salary;
+
+    private Boolean backgroundCheck;
+    private Boolean degreeVerification;
 
     public Employee() {
     }
 
-    public Employee(String name, String email, String role, Integer experience, Double salary) {
+    public Employee(String name, String email, String role,
+            Integer experience, Double salary,
+            Boolean backgroundCheck, Boolean degreeVerification) {
         this.name = name;
         this.email = email;
         this.role = role;
         this.experience = experience;
         this.salary = salary;
+        this.backgroundCheck = backgroundCheck;
+        this.degreeVerification = degreeVerification;
     }
 
     public Long getId() {
@@ -74,5 +80,21 @@ public class Employee {
 
     public void setSalary(Double salary) {
         this.salary = salary;
+    }
+
+    public Boolean getBackgroundCheck() {
+        return backgroundCheck;
+    }
+
+    public void setBackgroundCheck(Boolean backgroundCheck) {
+        this.backgroundCheck = backgroundCheck;
+    }
+
+    public Boolean getDegreeVerification() {
+        return degreeVerification;
+    }
+
+    public void setDegreeVerification(Boolean degreeVerification) {
+        this.degreeVerification = degreeVerification;
     }
 }
